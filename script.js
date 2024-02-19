@@ -1,9 +1,11 @@
 async function fetchData() {
-    const res=await fetch ("https://api.coronavirus.data.gov.uk/v1/data");
-    const record=await res.json();
-    document.getElementById("date").innerHTML=record.data[0].date;
-    document.getElementById("areaName").innerHTML=record.data[0].areaName;
-    document.getElementById("latestBy").innerHTML=record.data[0].latestBy;
-    document.getElementById("deathNew").innerHTML=record.data[0].deathNew;
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
+        
+    });
+    const record = await res.json();
+    document.getElementById("user_id").innerHTML = JSON.stringify(record.userId);
+    document.getElementById("id").innerHTML = JSON.stringify(record.id);
+    document.getElementById("title").innerHTML = JSON.stringify(record.title);
+    document.getElementById("completed").innerHTML = JSON.stringify(record.completed);
 }
-fetchData();
+fetchData().then(() => console.log("Data fetched")).catch((err) => console.log(err));
