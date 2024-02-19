@@ -1,0 +1,11 @@
+{
+    "name": "Todos",
+    "version": "1.0.0",
+    "description": "A simple todo list extension",
+    "manifest_version": 3,
+    "author": "Didier Peran Ganthier",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Todos"
+    }
+}
